@@ -49,7 +49,7 @@ public class JsonBodyTest {
 			public void run() {
 				String body = "{\"firstName\":\"John\",\"lastName\":\"Smith\"}";
 				
-				Result result = routeAndCall(fakeRequest(POST, "/users" + "?token=randomstring").withJsonBody(Json.parse(body)));
+				Result result = routeAndCall(fakeRequest(POST, "/users" + QUERY).withJsonBody(Json.parse(body)));
 				
 			    assertThat(status(result)).isEqualTo(CREATED);
 			    assertThat(contentType(result)).isEqualTo("application/json");
@@ -64,7 +64,7 @@ public class JsonBodyTest {
 			public void run() {
 				String body = "{\"firstName\":\"John\",\"lastName\":\"Smith\"}";
 				
-				Result result = routeAndCall(fakeRequest(PUT, "/users/" + "123" + "?token=randomstring").withJsonBody(Json.parse(body)));
+				Result result = routeAndCall(fakeRequest(PUT, "/users/" + "123" + QUERY).withJsonBody(Json.parse(body)));
 				
 			    assertThat(status(result)).isEqualTo(OK);
 			    assertThat(contentType(result)).isEqualTo("application/json");
