@@ -6,8 +6,6 @@ import static play.mvc.Http.Status.UNAUTHORIZED;
 import static play.test.Helpers.GET;
 import static play.test.Helpers.POST;
 import static play.test.Helpers.PUT;
-import static play.test.Helpers.charset;
-import static play.test.Helpers.contentType;
 import static play.test.Helpers.fakeApplication;
 import static play.test.Helpers.fakeRequest;
 import static play.test.Helpers.routeAndCall;
