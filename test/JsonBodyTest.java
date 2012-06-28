@@ -52,8 +52,6 @@ public class JsonBodyTest {
 				Result result = routeAndCall(fakeRequest(POST, "/users" + QUERY).withJsonBody(Json.parse(body)));
 				
 			    assertThat(status(result)).isEqualTo(CREATED);
-			    assertThat(contentType(result)).isEqualTo("application/json");
-			    assertThat(charset(result)).isEqualTo("utf-8");
 			}
 		});
 	}	
@@ -67,8 +65,6 @@ public class JsonBodyTest {
 				Result result = routeAndCall(fakeRequest(PUT, "/users/" + "123" + QUERY).withJsonBody(Json.parse(body)));
 				
 			    assertThat(status(result)).isEqualTo(OK);
-			    assertThat(contentType(result)).isEqualTo("application/json");
-			    assertThat(charset(result)).isEqualTo("utf-8");
 			}
 		});
 	}
